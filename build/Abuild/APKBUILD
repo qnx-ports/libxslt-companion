@@ -1,6 +1,6 @@
 pkgname=libxslt
 pkgver=1.1.43
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="XML stylesheet transformation library"
 url="http://xmlsoft.org/XSLT/"
 arch="all"
@@ -45,6 +45,7 @@ dev() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 96110b0397a8f5791f489127574e2143845feb61bea0581d7b7e3c1101fd0718483bae81a7ce417b971bd678293bfd95daddad0dadd3e256c87d41a69faed85a  libxslt-1.1.43.tar.xz
 "
